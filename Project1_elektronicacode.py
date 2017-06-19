@@ -38,33 +38,50 @@ delay = 5000
 waarde_toe = 350
 toe = False
 run = True
+p.start(0)
+time.sleep(1/10)
+p.stop()
+
 
 while run== True:
     ldr_value = readadc(light_channel)
     if ldr_value <= waarde_toe:
+        print("moet dicht")
         if toe == False:
-            p.start(12.5)
+            print("is open --> dicht doen")
+            # p.ChangeDutyCycle(99)
+            p.start(99.9)
             data_invoegen(ldr_value, toe)
             time.sleep(5)
             p.stop()
+            # p.ChangeDutyCycle(0)
+
             toe=True
         else:
+            print("is al toe")
             data_invoegen(ldr_value, toe)
             time.sleep(5)
-    else:
-        time.sleep(0.001)
+
     if ldr_value > waarde_toe :
+        print("moet open")
+
         if toe== True:
+            print("is toe --> open doen")
+            # p.ChangeDutyCycle(2.5)
+
             p.start(2.5)
             data_invoegen(ldr_value, toe)
             time.sleep(5)
             p.stop()
+            # p.ChangeDutyCycle(0)
+
             toe = False
         else:
+            print("is al open")
+
             data_invoegen(ldr_value, toe)
             time.sleep(5)
-    else:
-        time.sleep(0.001)
+
     print(ldr_value)
     print(toe)
 
