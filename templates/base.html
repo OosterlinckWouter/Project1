@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo_info">
+        <a href="{{url_for("Dashboard")}}"><img src="../static/images/Logo.png" alt=""></a>
+    </div>
+
+    <div class="menu">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for("Dashboard") }}">Dashboard</a></li>
+                <li><a href="{{ url_for("Info") }}">Info</a></li>
+                <li><a href="{{ url_for("Contact") }}">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+{% block content %}
+{% endblock %}
+
+<footer class="contact">
+    <div class="contact_gegevens">
+        <h1>Contact Info</h1>
+        <div class="contact_gegevens_info">
+            <img src="../static/images/phone.png" alt="" width="25px" height="25px">
+            <p>0478/34.24.73</p>
+        </div>
+        <div class="contact_gegevens_info">
+            <img src="../static/images/email.png" alt="" width="25px" height="25px">
+            <p>wouter.oosterlinck@student.howest.be</p>
+        </div>
+
+    </div>
+    <div class="navigatie">
+        <h1>Navigatie</h1>
+        <a href="{{ url_for("Dashboard")}}">- Dashboard</a>
+        <a href="{{ url_for("Info") }}">- Info</a>
+        <a href="{{ url_for("Contact") }}">- Contact</a>
+    </div>
+
+</footer>
+<div class="copyright">
+        <p>&copy;Copyright. All rights Reserved</p>
+    </div>
+
+
+
+</body>
+</html>

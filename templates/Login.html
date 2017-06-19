@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+<body class="login">
+    <form action="{{url_for('inloggen_controleren')}}" method="post">
+        <div class="form">
+            <img src="../static/images/Logo.png" alt="" width="161" height="51" class="logo" >
+
+            <div class="form__naam">
+                <label for="naam">Naam:</label><br>
+                <input class="input_form" type="text" id="naam" name="naam" placeholder="Naam"  required>
+            </div>
+
+
+            <div class ="form__wachtwoord">
+                <label for="password">Wachtwoord:</label><br>
+                <input class="input_form" type="password" id="password" name="password" placeholder="Wachtwoord"  required>
+            </div>
+            <br>
+            <div class="form__submit">
+                <input id="login" type="submit" value="Login">
+            </div>
+        </div>
+
+</body>
+</html>

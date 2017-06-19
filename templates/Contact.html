@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contact
+{% endblock %}
+
+{% block content %}
+
+<div class="inhoud_contact">
+    <h1>Contacteer ons</h1>
+    <div class="contactinfo">
+        <h1>Contact Info</h1>
+        <div class="contactinfo_gegeven">
+            <img src="../static/images/phone.png" alt="" width="25px" height="25px">
+            <p>0478/34.24.73</p>
+        </div>
+        <div class="contactinfo_gegeven">
+            <img src="../static/images/email.png" alt="" width="25px" height="25px">
+            <p>wouter.oosterlinck@student.howest.be</p>
+        </div>
+    </div>
+    <div class="adres">
+        <h1>Adres</h1>
+        <p>
+            Hazelaarkouter 57 <br>
+            Tielt,West-Vlaanderen <br>
+            België
+        </p>
+
+    </div>
+
+    <div class="formulier">
+        <h1>Bericht sturen</h1>
+        <form action="{{url_for('contactform')}}" method="post">
+        <div class="formulier_invullen">
+            <div class="form__naam">
+                <label for="naam">Naam: <br></label>
+                <input type="text" id="naam" name="naam"  required>
+            </div>
+
+            <div class="form__email">
+                <label for="email">Email: <br></label>
+                <input type="email" id="email" name="email" width="200px" required>
+            </div>
+            <div class="form_bericht">
+                <label for="bericht">Bericht: <br></label>
+                <textarea id="bericht" name="bericht" cols="50" rows="20" required>
+
+                </textarea>
+
+            </div>
+
+            <div class="form__submit">
+                <input type="submit" value="Versturen">
+            </div>
+
+        </div>
+    </form>
+
+    </div>
+</div>
+{% endblock %}}

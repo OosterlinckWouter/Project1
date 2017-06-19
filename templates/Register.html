@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+<body class="register">
+
+    <form action="{{url_for("sentRegistreer")}}" method="post"">
+        <div class="form">
+            <img src="../static/images/Logo.png" alt="" width="161" height="51" class="logo" >
+            <div class="form__email">
+                <label for="email">E-mailadres:</label><br>
+                <input class="input_form" type="email" id="email" name="email" placeholder="E-mailadres" required>
+            </div>
+
+            <div class="form__naam">
+                <label for="naam">Naam:</label><br>
+                <input class="input_form" type="text" id="naam" name="naam" placeholder="Naam" required>
+            </div>
+
+
+            <div class ="form__wachtwoord">
+                <label for="password">Wachtwoord:</label><br>
+                <input class="input_form" type="password" id="password" name="password" placeholder="Wachtwoord"  required>
+            </div>
+            <br>
+            <div class="form__submit">
+                <input id="register" type="submit" value="Register">
+            </div>
+            <a href="{{url_for('Login')}}" id="a_register">Heb je al een account? Log dan hier in.</a>
+        </div>
+
+</body>
+</html>
