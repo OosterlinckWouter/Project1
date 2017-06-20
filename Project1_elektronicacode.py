@@ -34,8 +34,7 @@ IO.setwarnings(False)
 IO.setmode(IO.BCM)
 IO.setup(23, IO.OUT)
 p = IO.PWM(23, 50)
-delay = 5000
-waarde_toe = 350
+waarde_toe = 200
 toe = False
 run = True
 p.start(0)
@@ -49,32 +48,28 @@ while run== True:
         print("moet dicht")
         if toe == False:
             print("is open --> dicht doen")
-            # p.ChangeDutyCycle(99)
+
             p.start(99.9)
             data_invoegen(ldr_value, toe)
-            time.sleep(5)
+            time.sleep(25)
             p.stop()
-            # p.ChangeDutyCycle(0)
 
             toe=True
         else:
             print("is al toe")
+
             data_invoegen(ldr_value, toe)
             time.sleep(5)
 
     if ldr_value > waarde_toe :
         print("moet open")
-
         if toe== True:
             print("is toe --> open doen")
-            # p.ChangeDutyCycle(2.5)
 
             p.start(2.5)
             data_invoegen(ldr_value, toe)
-            time.sleep(5)
+            time.sleep(17)
             p.stop()
-            # p.ChangeDutyCycle(0)
-
             toe = False
         else:
             print("is al open")
@@ -84,4 +79,3 @@ while run== True:
 
     print(ldr_value)
     print(toe)
-
