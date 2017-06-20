@@ -19,7 +19,18 @@ function drawBasic() {
       data.addColumn('number', 'Lichtsensorwaarde');
 
       data.addRows([
-        ['{{ lstData[0][1] | string}}' , {{global lstData[0][0] | string}}], ['{{global lstData[1][1] | string}}' ,  {{global lstData[1][0] | string}}] , ['{{global lstData[2][1] | string}}',{{global lstData[2][0] | string}}] , ['{{global lstData[3][1] | string}}' ,{{global lstData[3][0] | string}}],['{{global lstData[4][1] | string}}', {{global lstData[4][0] | string}}],['{{global lstData[5][1] | string}}',{{global lstData[5][0] | string}}],['{{global lstData[6][1] | string}}',{{global lstData[6][0] | string}}],['{{global lstData[7][1] | string}}',{{global lstData[7][0] | string}}],['{{global lstData[8][1] | string}}', {{global lstData[8][0] | string}}],['{{global lstData[9][1] | string}}', {{global lstData[9][0] | string}}],['{{global lstData[10][1] | string}}',{{global lstData[10][0] | string}}],['{{global lstData[11][1] | string}}', {{global lstData[11][0] | string}}],['{{global lstData[12][1] | string}}', {{global lstData[12][0] | string}}],['{{global lstData[13][1] | string}}',{{global  lstData[13][0] | string}}],['{{global lstData[14][1] | string}}', {{global lstData[14][0] | string}}],['{{global lstData[15][1] | string}}', {{global lstData[15][0] | string}}],['{{global lstData[16][1] | string}}', {{global lstData[16][0] | string}}],['{{global lstData[17][1] | string}}', {{global lstData[17][0] | string}}],['{{global lstData[18][1] | string}}', {{global lstData[18][0] | string}}],['{{global lstData[19][1] | string}}', {{global lstData[19][0] | string}}]
+              [0, 0],   [1, 10],  [2, 23],  [3, 17],  [4, 18],  [5, 9],
+        [6, 11],  [7, 27],  [8, 33],  [9, 40],  [10, 32], [11, 35],
+        [12, 30], [13, 40], [14, 42], [15, 47], [16, 44], [17, 48],
+        [18, 52], [19, 54], [20, 42], [21, 55], [22, 56], [23, 57],
+        [24, 60], [25, 50], [26, 52], [27, 51], [28, 49], [29, 53],
+        [30, 55], [31, 60], [32, 61], [33, 59], [34, 62], [35, 65],
+        [36, 62], [37, 58], [38, 55], [39, 61], [40, 64], [41, 65],
+        [42, 63], [43, 66], [44, 67], [45, 69], [46, 69], [47, 70],
+        [48, 72], [49, 68], [50, 66], [51, 65], [52, 67], [53, 70],
+        [54, 71], [55, 72], [56, 73], [57, 75], [58, 70], [59, 68],
+        [60, 64], [61, 60], [62, 65], [63, 67], [64, 68], [65, 69],
+        [66, 70], [67, 72], [68, 75], [69, 80]
       ]);
 
       var options = {
@@ -57,30 +68,14 @@ function drawBasic() {
 <div class="inhoud">
     <div class="lichtsensor">
         <h1>Lichtsensor</h1>
-        <div class="chart_div" style="width: 900px; height: 500px"></div>
+        <div class="chart_div" style="width: 1200px; height: 500px;float: left;margin: 0;padding: 0;"></div>
         </div>
         <div class="lichtsensor_info">
             <div class="lichtsensor_info_tekst">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec est mi, ornare fringilla pretium et, semper ullamcorper metus. Ut mollis lacinia enim eu scelerisque. Donec sollicitudin gravida tristique. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque volutpat quam sed quam faucibus, quis scelerisque turpis sagittis. Mauris pulvinar pharetra imperdiet. Ut id ullamcorper tortor. Sed non augue vitae dui imperdiet pretium. Integer ultrices vel justo vitae fringilla. Nam placerat purus vitae elit posuere posuere. Duis neque eros, dignissim ac ligula et, porta imperdiet leo. Aenean eget interdum ante. Donec sodales ligula ac diam rhoncus, vitae convallis nunc mollis.
-
+                <p> In deze grafiek kan je de waarden zien van de lichtsensor. Voor deze grafiek worden de laatste 20 waarden uit de database opgehaald. Deze waarde zal beslissend zijn of dat de lamellen open of toe staan. De grenswaarde is 200, als de waarde daar onder zakt zullen de lamellen sluiten. Als de waarde weer boven die 200 gaat zullen de lamellen weer open gaan.
                 </p>
             </div>
-            <div class="lichtsensor_info_waarden">
-                <div class="lichtsensor_info_waarde">
-                    <strong>Gemiddelde: </strong><br>
-                    187
-                </div>
-                <div class="lichtsensor_info_waarde">
-                    <strong>Maximum: </strong><br>
-                    205
-                </div>
-                <div class="lichtsensor_info_waarde">
-                    <strong>Minimum: </strong><br>
-                    163
-                </div>
-
-
-            </div>
+        </div>
 
         </div>
 
