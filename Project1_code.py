@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 #GLOBALE VARIABLE
 naam=""
-lstData =[]
+# lstData =[]
 
 @app.route('/',methods=["GET","POST"])
 def Register():
@@ -28,16 +28,16 @@ def Contact():
 
 @app.route('/Dashboard')
 def Dashboard():
-    dbdashboard= DbClass()
-    lstData = dbdashboard.invoegen_data_charts()
-    #eerste waarde moe geconverteerd worden naar string
-    #tweede waarde moet geconverteerd worden naar een date format
-    for waarde in lstData:
-        lichtsensor=waarde[0]
-        tijdstip=waarde[1]
-        print(lichtsensor)
-        print(tijdstip)
-    return render_template('Dashboard.html', lstData=lstData)
+    # dbdashboard= DbClass()
+    # lstData = dbdashboard.invoegen_data_charts()
+    # #eerste waarde moe geconverteerd worden naar string
+    # #tweede waarde moet geconverteerd worden naar een date format
+    # for waarde in lstData:
+    #     lichtsensor=waarde[0]
+    #     tijdstip=waarde[1]
+    #     print(lichtsensor)
+    #     print(tijdstip)
+    return render_template('Dashboard.html')
 
 #REGISTREREN
 @app.route('/sentRegistreer', methods=["POST"])
